@@ -1,6 +1,12 @@
 pipeline {
 
        agent { label 'master' }
+       tools {
+	
+	maven "maven"
+        jdk "jdk"
+
+	}
 
    	stage("Cloning frm git") {
 		steps {
